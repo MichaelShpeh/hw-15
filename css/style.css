@@ -1,13 +1,16 @@
 .holder {
     display: flex;
+    flex-direction: row;
     border-radius: 25px 25px 0px 0px;
     border: solid 10px black;
+    flex-wrap: wrap;
+    /* gap: 10px; */
 }
 
 .item:first-child {
     order: -1;
     width: 250px;
-    height: 50px;
+    /* height: 50px;  */
     background-color: tomato;
     border-radius: 25px 0px 0px 0px;
     text-align: center;
@@ -17,7 +20,7 @@
     order: 2;
     background-color: blue;
     width: 100px;
-    height: 50px;
+    /* height: 50px; */
     text-align: center;
 }
 
@@ -25,7 +28,7 @@
     order: 1;
     background-color: purple;
     width: 100px;
-    height: 50px;
+    /* height: 50px; */
     text-align: center;
 }
 
@@ -33,7 +36,7 @@
     order: 3;
     background-color: green;
     width: 100px;
-    height: 50px;
+    /* height: 50px; */
     text-align: center;
 }
 
@@ -41,7 +44,11 @@
     order: 0;
     background-color: orange;
     width: 250px;
-    height: 50px;
+    /* height: 50px; */
     text-align: center;
     border-radius: 0px 25px 0px 0px;
+}
+
+.item {
+    flex-basis: calc((100% - 20px) / 3);
 }
